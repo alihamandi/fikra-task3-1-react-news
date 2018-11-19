@@ -1,8 +1,13 @@
 *{
 margin: 0;
 padding: 0;
+font-family: Arial, Helvetica, sans-serif;
 }
-header{
+#root{
+    height: 100%;
+    background-color: #f5f5fa;
+}
+#navBar{
     height: 100px;
     background-color: white;
     display: flex;
@@ -31,6 +36,7 @@ input[type='text']{
 #magn{
     position: absolute;
     left: 71%;
-    top: 4.8%;
+    top: 4.9%;
     width: 20px;
 }
+

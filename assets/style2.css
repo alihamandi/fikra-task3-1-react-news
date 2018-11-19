@@ -1,0 +1,48 @@
+#main {
+    padding: 0% 10%;
+    padding-top: 50px;
+    
+    
+}
+
+.article{
+    position: relative;
+    display: flex;
+    margin: 20px 0px 20px 0px;
+    background-color: white;
+    padding: 14px;
+    border-radius: 5px;
+    border: 1px  #e5e9f2 solid;
+    margin-left: 14px;
+}
+
+.photo{
+border-radius: 5px;
+
+}
+
+.date{
+    color: cornflowerblue;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10%;
+    left: 35%;
+}
+
+.head{
+    font-family: serif;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    width: 80%;
+}
+
+.des{
+    margin-right: 5%;
+    max-width: 80%;
+}
+
+.content{
+    padding: 0 0 0 0;
+}
+
+
