@@ -4,6 +4,13 @@
     
 }
 
+.body{
+    display: flex;
+    align-content: center;
+    width: 90%;
+    min-width: 650px;
+}
+
 .article{
     position: relative;
     display: flex;
@@ -13,10 +20,7 @@
     border-radius: 5px;
     border: 1px  #e5e9f2 solid;
     align-content: center;
-    
-   
-
-    
+    min-width: 1000px;
 }
 .content{
     padding: 0 ;
@@ -45,6 +49,7 @@ padding-right: 2%;
 
 .des{
     max-width: 90vh;
+    min-width: 650px;
 }
 
 .img {
@@ -53,6 +58,14 @@ padding-right: 2%;
     max-height: 165px;
     padding: 0;
     margin: 0;
+}
+
+.arrows{
+    position: absolute;
+    right: 3%;
+    top: 35%;
+    align-content: center;
+    text-align: center;
 }
 
 
