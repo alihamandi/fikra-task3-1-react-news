@@ -63,7 +63,7 @@ class News extends Component{
                 </div>
                 <div id="search">
                 <div id="search-box">
-                        <input  id="search" placeholder="Search term" type="text" value={this.state.searchValue}/>
+                        <input  id="search" placeholder="Search term" type="text" onKeyUp={this.OnKeyUp.bind(this)} onChange={this.onInputChange.bind(this)} value={this.state.searchValue}/>
                 </div>
                 </div>
             </header>
