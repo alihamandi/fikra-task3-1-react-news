@@ -76,7 +76,7 @@ class News extends Component{
                     <div key={i} id="main">
                         <article  className="article">
                             <div  className="photo">
-                                <img width="250px"  src={item.urlToImage} alt="photo"/>
+                                <img  className="img"  width="165" height="165" src={item.urlToImage} alt="photo"/>
                             </div>
                             <div className="content">
                                 <div className="head">

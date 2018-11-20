@@ -1,7 +1,6 @@
 #main {
     padding: 0% 10%;
-    padding-top: 50px;
-    
+ 
     
 }
 
@@ -10,16 +9,17 @@
     display: flex;
     margin: 20px 0px 20px 0px;
     background-color: white;
-    padding: 14px;
+    padding: 15px;
     border-radius: 5px;
     border: 1px  #e5e9f2 solid;
-    align-content: center
+    align-content: center;
+    
+   
 
     
 }
 .content{
     padding: 0 ;
-
 }
 
 .photo{
@@ -29,6 +29,8 @@ padding-right: 2%;
 }
 
 .date{
+    position: absolute;
+    top: 82%;
     color: cornflowerblue;
     font-weight: bold;
 
@@ -42,10 +44,16 @@ padding-right: 2%;
 }
 
 .des{
-    margin-bottom: 6%;
-    max-width: 80%;
+    max-width: 90vh;
 }
 
+.img {
+    object-fit: cover;
+    max-width: 165px;
+    max-height: 165px;
+    padding: 0;
+    margin: 0;
+}
 
 
 
