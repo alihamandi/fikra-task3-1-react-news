@@ -13,20 +13,25 @@
     padding: 14px;
     border-radius: 5px;
     border: 1px  #e5e9f2 solid;
-    margin-left: 14px;
+    align-content: center
+
+    
+}
+.content{
+    padding: 0 ;
+
 }
 
 .photo{
 border-radius: 5px;
+padding-right: 2%;
 
 }
 
 .date{
     color: cornflowerblue;
     font-weight: bold;
-    position: absolute;
-    bottom: 10%;
-    left: 35%;
+
 }
 
 .head{
@@ -37,12 +42,12 @@ border-radius: 5px;
 }
 
 .des{
-    margin-right: 5%;
+    margin-bottom: 6%;
     max-width: 80%;
 }
 
-.content{
-    padding: 0 0 0 0;
-}
+
+
+
 
 

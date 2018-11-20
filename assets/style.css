@@ -33,10 +33,5 @@ input[type='text']{
 .search-box{
     position: relative;
 }
-#magn{
-    position: absolute;
-    left: 71%;
-    top: 4.9%;
-    width: 20px;
-}
+
 

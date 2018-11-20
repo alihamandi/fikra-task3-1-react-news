@@ -2,25 +2,58 @@ import styled from 'styled-components';
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import logo from './assets/logo.png' ;
-import magn from './assets/mag.png'
+
+
 
 
 class News extends Component{
     constructor(){
         super()
         this.state = {
-            news : []
+            news : [],
+            searchValue:''
         }
-        fetch('https://newsapi.org/v2/everything?q=bitcoin&apiKey=1304dda50b3c4066b642db00ccf7ae98')
+
+        this.getNews()
+
+        
+    }
+
+    getNews(searchTerm = 'Iraq'){
+        fetch(`https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=978d6c3818ff431b8c210ae86550fb1f`)
         .then((response)=>{
             return response.json()
         }).then((data)=>{
             this.setState({
                 news: data.articles
+                
             })
-            
         })
     }
+
+    
+
+    onInputChange(event){
+        this.setState({
+          searchValue: event.target.value
+        })
+      } 
+
+
+      OnKeyUp(event){
+        if (event.key == 'Enter') {
+
+            this.getNews(this.state.searchValue)
+            this.setState({
+                searchValue:''
+            })
+            
+        }
+      }
+
+
+
+    
 
     render(){
         return <React.Fragment>
@@ -29,25 +62,21 @@ class News extends Component{
                     <img id="logo" src={logo} alt="logo"/>
                 </div>
                 <div id="search">
-                    <div id="search-box">
-                        <div >
-                            <img id="magn" src={magn} alt=""/>  
-                        </div>
-                        <input id="search" placeholder="Search a topic" type="text"/>
-                    </div>
+                <div id="search-box">
+                        <input  id="search" placeholder="Search term" type="text" value={this.state.searchValue}/>
+                </div>
                 </div>
             </header>
     
             <div>
-            
             {
                 this.state.news.map((item , i)=>{
-                
+                    console.log(item)
                     return(
                     <div key={i} id="main">
                         <article  className="article">
                             <div  className="photo">
-                                <img width="50%" height="100%"  src={item.urlToImage} alt="photo"/>
+                                <img width="250px"  src={item.urlToImage} alt="photo"/>
                             </div>
                             <div className="content">
                                 <div className="head">
@@ -62,12 +91,8 @@ class News extends Component{
                             </div>
                         </article>
                     </div>)
-                    
-
             })
-            
             }
-
             </div>
         </React.Fragment>
         
@@ -104,10 +129,10 @@ class News extends Component{
 
 
 
-function App(){
+function App() {
     return <div>
-        <News/>
+      <News/>
     </div>
-}
-
-ReactDOM.render(<App/>,document.getElementById('root'))
+  }
+  
+  ReactDOM.render(<App/>, document.getElementById('root'))
